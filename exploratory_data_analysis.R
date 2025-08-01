@@ -3,9 +3,9 @@ title: "Common Assessment (CA) Exploratory Data Analysis"
 description: |
   Exploring Common Assessment (CA) data to discover how CA is performing as a tool to collect client intake information.
 author:
-  - name: Rui Sun | Analytics Unit | Finance, Analysis and Systems Support Branch (FASSB) 
+  - name: Rui Sun | Analytics Unit | ***** Branch 
     url: http://intra.infogo.gov.on.ca/infogo/home.html#orgProfile/113819/en
-    affiliation: Employment and Training Division (ETD) | Ministry of Labour, Training and Skills Development (MLTSD)
+    affiliation: "*****"
     affiliation_url: 
 date: "`r format(Sys.Date(), '%B %d %Y')`"
 knit: (function(inputFile, encoding) {
@@ -74,7 +74,7 @@ raw <- read_rds(here("data/ca_data.rds"))
 
 - The purpose of this exploratory analysis is to gain more insight into how Common Assessment (CA) is performing as a tool to collect key information about Integrated Employment Services (IES) clients.
 
-- To accomplish this, using data from CA records submitted between January 1, 2021 to early July 2022, we explored:
+- To accomplish this, using data from CA records submitted between ***** to early ******, we explored:
 
   - Patterns in “prefer not to answer” (PNTA)  
 
@@ -85,9 +85,9 @@ raw <- read_rds(here("data/ca_data.rds"))
 # PART 1: "Prefer not to answer"(PNTA)
 
 ## How often is each client choosing "Prefer not to answer"?
--	Overall, 29% or 14,421 clients indicated PNTA to at least one of the 20 questions in CA with this option.
--	Among all clients who indicated PNTA at least once, most of them indicated PNTA to only one question (67%), followed by a relatively lower proportion indicating PNTA to two questions (23%). 
--	Rates and numbers of clients indicating PNTA more than two times drastically decreases; for example, only 0.3% or 40 clients indicate PNTA six times.
+-	Overall, **% or ***** clients indicated PNTA to at least one of the 20 questions in CA with this option.
+-	Among all clients who indicated PNTA at least once, most of them indicated PNTA to only one question (***%), followed by a relatively lower proportion indicating PNTA to two questions (****%). 
+-	Rates and numbers of clients indicating PNTA more than two times drastically decreases; for example, only 0.3% or **** clients indicate PNTA six times.
 -	In general, it doesn’t seem like PNTA is being overused, nor that the same clients are choosing PNTA across all questions.
 
 ```{r}
@@ -126,7 +126,7 @@ scale_y_continuous(label = scales :: percent_format(scale=1))
 
 ```
 ## How often is PNTA chosen for each question?
--	Rates of preferring not to answer range from 0.1% of clients who were asked about sensory difficulties up to 14.7% of clients who were asked about past wage 
+-	Rates of preferring not to answer range from ****% of clients who were asked about sensory difficulties up to ****% of clients who were asked about past wage 
 -	Wage questions have the highest proportions of preferring not to answer, followed by race and LGBTQ+ identity
 -	Wage questions and some socio-demographic questions, like race and LGBTQ+ identity, may be more sensitive or complicated for clients or caseworkers to answer, which may suggest the need for accessible help text and clearer rationale
 
@@ -348,7 +348,7 @@ scale_y_continuous(label = scales :: percent_format(scale=1),limits = c(0,60))+
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
--	The majority of clients (56%) are Single, a quarter are Married, and the proportions in all other groups are relatively much smaller.
+-	The majority of clients (***%) are ****, a **** are ****, and the proportions in all other groups are relatively much smaller.
 
 ### Education level
 
@@ -368,7 +368,7 @@ scale_y_continuous(label = scales :: percent_format(scale=1),limits = c(0,35))+
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
--	The highest level of education most of our clients have – 28.6% – is a high school diploma or equivalent, followed by 19.8% with a college certificate or diploma, 14.8% with less than grade 12, and 13.8% with a bachelor’s degree.
+-	The highest level of education most of our clients have – **** – is a **** or equivalent, followed by ****% with a **** or diploma, ****% with less than grade ***, and ****% with a ***** degree.
 
 ### Stream
 
@@ -388,7 +388,6 @@ scale_y_continuous(label = scales :: percent_format(scale=1),limits = c(0,50))+
 theme(axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
--	Most clients in IES – 47% – are segmented into Stream C, followed by 31% in Stream B and 22% in Stream A. According to the current statistical segmentation model, clients in Stream C have the relatively highest risk of long-term unemployment compared to those in Stream B who have a relatively higher risk than those in Stream A. 
 
 ## How do the proportions of socio-demographic groups vary by stream?
 
@@ -436,7 +435,7 @@ demo_stream_inter(gender,demo.name[1])%>%
 ```
 
 -	As Stream “increases” (i.e., from Stream A to C) the proportion of clients indicating a gender other than just Woman or just Man also increases (with the exception of “another gender identity”). 
--	The overwhelming majority of clients who identify as a non-binary gender, like two-spirit, transgender, or gender non-binary, are in Stream C.
+-	The overwhelming majority of clients who identify as a non-binary gender, like two-spirit, transgender, or gender non-binary, are in Stream ***.
 
 ```{r}
 stacked.graph(gender,demo.name[1])
@@ -449,7 +448,7 @@ demo_stream_inter(lgbtq,demo.name[2])%>%
   formatPercentage(2:4, digits = 0)
 ```
 
--	Those who identify as LGBTQ+ or prefer not to answer this question are incrementally more likely to be in Stream B and C; as stream increases, proportion of clients answering yes or PNTA to LGBTQ+ also increases.
+-	Those who identify as **** or prefer not to answer this question are incrementally more likely to be in Stream B and C; as stream increases, proportion of clients answering yes or PNTA to LGBTQ+ also increases.
 -	Accordingly, and in alignment with research on sexual orientation and unemployment, this question may be a valuable addition to a future iteration of the segmentation model.
 -	Clients who indicated Yes and PNTA (to LGBTQ+) have similar proportions in each Stream, compared to those who indicated No.
 
@@ -464,8 +463,8 @@ demo_stream_inter(indigenous,demo.name[3])%>%
   formatPercentage(2:4, digits = 2)
 ```
 
-- As stream increases, the proportion of clients indicating an Indigenous identity also increases (with the exception of clients who choose multiple indigenous identities).
--	A large majority of clients who identify as Inuit, Metis and First Nations are in Stream C.
+- As stream increases, the proportion of clients indicating an **** also increases (with the exception of clients who choose multiple indigenous identities).
+-	A large majority of clients who identify as Inuit, Metis and First Nations are in Stream ****.
 
 ```{r}
 stacked.graph(indigenous,demo.name[3])
@@ -493,10 +492,10 @@ demo_stream_inter(race_category,demo.name[5])%>%
 ```
 
 - We see differing trends when comparing different race categories with stream. 
-   -	Specifically, those who identify as South Asian or East/Southeast Asian have an incrementally lower likelihood of long-term unemployment. 
-   -	Comparatively, proportions are similar across streams for those who identify as Black, Middle Eastern, Latino, Another race category, or PNTA. 
-   -	As stream increases, the proportion of clients indicating indigenous or indicating multiple race categories also increases.
-- A large majority of Indigenous clients are in Stream C (77%). Conversely, the majority of South Asian clients are in Stream A (43%).
+   -	Specifically, those who identify as **** or ***** have an incrementally lower likelihood of long-term unemployment. 
+   -	Comparatively, proportions are similar across streams for those who identify as *****, Another race category, or PNTA. 
+   -	As stream increases, the proportion of clients indicating *** or indicating **** categories also increases.
+- A large majority of Indigenous clients are in Stream *** (***%). Conversely, the majority of **** clients are in Stream ** (****%).
 
 ```{r}
 stacked.graph(race_category,demo.name[5])
@@ -509,8 +508,8 @@ demo_stream_inter(marital_status,demo.name[6])%>%
   formatPercentage(2:4, digits = 1)
 ```
 
-- As stream increases, the proportion of divorced, separated, and widowed clients also increases. Conversely, the proportion of married clients decreases as stream increases.
-- The large majority of clients who are widowed, separated or divorced are in Stream C, while the majority of clients who are married are in Stream B.
+- As stream increases, the proportion of ***, and **** clients also increases. Conversely, the proportion of ***** clients decreases as stream increases.
+- The large majority of clients who are *****, *** or *** are in Stream ****, while the majority of clients who are **** are in Stream ***.
 
 ```{r}
 stacked.graph(marital_status,demo.name[6])
@@ -523,8 +522,8 @@ demo_stream_inter(education_level,demo.name[7])%>%
   formatPercentage(2:4, digits = 1)
 ```
 
-- Clients with a grade 12 education or less, have an incrementally higher risk of long-term unemployment, whereas, clients who completed college or university have an incrementally lower risk of long-term unemployment.
-- Compared to other education levels, the overwhelming majority of clients with less than grade 12 education are in Stream C (74.3%).
+- Clients with a ***** education or less, have an incrementally higher risk of long-term unemployment, whereas, clients who completed ***** have an incrementally lower risk of long-term unemployment.
+- Compared to other education levels, the overwhelming majority of clients with less than grade 12 education are in Stream *** (***%).
 
 ```{r}
 stacked.graph(education_level,demo.name[7])
